@@ -9,12 +9,17 @@ import Icon from "./components/icon";
 import Badge from "./components/badge";
 import Button from "./components/button";
 import ButtonIcon from "./components/button-icon";
+import InputText from "./components/input-text";
+import InputCheckbox from "./components/input-checkbox";
+import Card from "./components/card";
+import Container from "./components/container";
 
 
 export default function App() {
 
   return (
-    <div className="grid gap-3">
+    <Container>
+      <div className="grid gap-3">
       <div className="flex flex-col gap-1">
         <Text variant={"body-md"} className="text-green-base">Olá Mundo</Text>
         <Text variant={"body-md-bold"} className="text-pink-base">Olá Mundo</Text>
@@ -41,7 +46,20 @@ export default function App() {
         <ButtonIcon icon={TrashIcon} variant={"tertiary"}/>
         <ButtonIcon icon={TrashIcon} disabled/>
       </div>
+      <div>
+        <InputText/>
+      </div>
+      <div>
+        <InputCheckbox/>
+      </div>
+      <div>
+        <Card size={"md"}>
+          Olá Mundo
+        </Card>
+      </div>
     </div>
+    </Container>
+    
   )
 }
 
